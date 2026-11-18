@@ -146,7 +146,11 @@
 		"lantern": ""
 	},
 	"city": {
-		"pick": ""
+		"pick": "",
+		"region": {
+			"tw": "",
+			"hk": ""
+		}
 	},
 	"login": {
 		"google": "",
@@ -179,6 +183,7 @@
 	},
 	"house": {
 		"pageTitle": "",
+		"invitedCount": "",
 		"share": {
 			"label": "",
 			"heavy": ""
@@ -258,6 +263,7 @@
 			"length": "",
 			"chars": "",
 			"blocked": "",
+			"area": "",
 			"generic": ""
 		},
 		"loadFailed": "",
@@ -279,14 +285,25 @@
 		"button": "",
 		"offerTitle": "",
 		"offerBody": "",
+		"failed": "",
 		"fire": "",
 		"later": "",
 		"pick": "",
 		"cancel": "",
 		"hold": "",
-		"heldNote": ""
+		"heldNote": "",
+		"giftInvitedTitle": "",
+		"giftInvitedBody": "",
+		"giftInviterTitle": "",
+		"giftInviterBody": "",
+		"giftMore": ""
 	},
 	"inAppBrowser": "",
+	"error": {
+		"title": "",
+		"line": "",
+		"reload": ""
+	},
 	"footer": {
 		"coffee": "",
 		"about": "",
@@ -321,6 +338,10 @@
 	},
 	"share": {
 		"copied": "",
+		"fireworkButton": "",
+		"glowButton": "",
+		"litText": "",
+		"newyearLitText": "",
 		"saveImage": "",
 		"story": {
 			"invite": "",
@@ -369,7 +390,8 @@
 			"what": {
 				"0": "",
 				"1": "",
-				"2": ""
+				"2": "",
+				"3": ""
 			},
 			"keeper": "",
 			"notService": "",
