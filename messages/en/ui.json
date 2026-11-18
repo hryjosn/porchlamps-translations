@@ -1,0 +1,658 @@
+{
+	"site": {
+		"name": "Porchlamps",
+		"title": "",
+		"description": "",
+		"ogAlt": ""
+	},
+	"legend": {
+		"open": "",
+		"rules": {
+			"0": "",
+			"1": "",
+			"2": ""
+		}
+	},
+	"hints": {
+		"house": "",
+		"skipAll": ""
+	},
+	"visit": {
+		"pageTitle": "",
+		"empty": "",
+		"backTonight": "",
+		"lit": "",
+		"loadFailed": "",
+		"retry": "",
+		"lightFailed": "",
+		"byline": "",
+		"pick": "",
+		"litNow": "",
+		"again": "",
+		"backMap": "",
+		"allLit": "",
+		"returned": "",
+		"earlier": "",
+		"report": "",
+		"reported": "",
+		"shareStory": ""
+	},
+	"tonight": {
+		"tagline": "",
+		"newyear": {
+			"minutes": "",
+			"seconds": "",
+			"celebrate": "",
+			"celebrateQuiet": "",
+			"held": "",
+			"show": ""
+		},
+		"whispersLabel": "",
+		"waiting": "",
+		"countShort": "",
+		"cardPosition": "",
+		"nextHouse": "",
+		"countyLights": "",
+		"countyLit": "",
+		"countyDark": "",
+		"countyEmpty": "",
+		"countyMine": "",
+		"countyLitByMe": "",
+		"countyGo": "",
+		"countFirst": "",
+		"heavy": "",
+		"mineNote": {
+			"seeYou": ""
+		},
+		"unseen": {
+			"line": "",
+			"go": ""
+		},
+		"noLightYet": "",
+		"nthLight": "",
+		"litBefore": "",
+		"litBeforeNamed": "",
+		"empty": "",
+		"quiet": "",
+		"quietSay": "",
+		"loading": "",
+		"loadFailed": "",
+		"litFor": "",
+		"yourTurn": "",
+		"yourTurnSay": "",
+		"mine": "",
+		"chipLights": ""
+	},
+	"actions": {
+		"house": "",
+		"houseUnseen": "",
+		"me": "",
+		"say": "",
+		"light": "",
+		"prev": "",
+		"next": "",
+		"hideCards": "",
+		"showCards": "",
+		"more": "",
+		"report": "",
+		"share": "",
+		"edit": "",
+		"collapse": "",
+		"send": "",
+		"close": "",
+		"back": "",
+		"backTonight": "",
+		"retry": ""
+	},
+	"compose": {
+		"label": "",
+		"placeholders": {
+			"0": "",
+			"1": "",
+			"2": ""
+		},
+		"starters": {
+			"0": "",
+			"1": "",
+			"2": "",
+			"3": ""
+		},
+		"count": "",
+		"countLabel": "",
+		"cityOnly": "",
+		"share": {
+			"label": "",
+			"hint": ""
+		},
+		"sticker": {
+			"open": "",
+			"change": "",
+			"tray": "",
+			"remove": ""
+		}
+	},
+	"stickers": {
+		"tea": "",
+		"moon": "",
+		"cat": "",
+		"umbrella": "",
+		"noodles": "",
+		"blanket": "",
+		"house": "",
+		"laptop": "",
+		"boba": "",
+		"scooter": "",
+		"sprout": "",
+		"lantern": ""
+	},
+	"city": {
+		"pick": ""
+	},
+	"login": {
+		"google": "",
+		"header": "",
+		"inApp": "",
+		"copyLink": "",
+		"copied": "",
+		"email": {
+			"lead": "",
+			"button": ""
+		}
+	},
+	"handoff": {
+		"open": "",
+		"fallback": "",
+		"title": "",
+		"yourLine": "",
+		"noLine": "",
+		"yes": "",
+		"no": "",
+		"invalid": "",
+		"failed": ""
+	},
+	"morning": {
+		"greeting": "",
+		"nightPassed": "",
+		"whileAway": "",
+		"nth": "",
+		"enter": ""
+	},
+	"house": {
+		"pageTitle": "",
+		"share": {
+			"label": "",
+			"heavy": ""
+		},
+		"returned": "",
+		"lightAgain": "",
+		"windowDate": "",
+		"windowReceived": "",
+		"windowOpen": "",
+		"nightNoLight": "",
+		"nightLoadFailed": "",
+		"recentTitle": "",
+		"recentEmpty": "",
+		"moreLights": "",
+		"morePeople": "",
+		"fold": "",
+		"recentFrom": "",
+		"recentFromCity": "",
+		"agoMinutes": "",
+		"agoHours": "",
+		"hoursLeft": "",
+		"legendTitle": "",
+		"collected": "",
+		"saveHouse": "",
+		"saveHouseLater": "",
+		"day": "",
+		"growNext": "",
+		"received": "",
+		"given": "",
+		"collectionTitle": "",
+		"noHouse": "",
+		"loadFailed": "",
+		"publicLabel": "",
+		"publicAsk": "",
+		"publicYes": "",
+		"publicNo": "",
+		"publicFailed": ""
+	},
+	"install": {
+		"add": "",
+		"iosTitle": "",
+		"iosSteps": {
+			"0": "",
+			"1": ""
+		},
+		"iosWhy": "",
+		"iosDone": ""
+	},
+	"push": {
+		"light": "",
+		"lightAnon": "",
+		"morning": "",
+		"evening": "",
+		"ask": "",
+		"wantsLights": "",
+		"wantsEvening": "",
+		"sectionTitle": "",
+		"denied": "",
+		"needsInstall": "",
+		"unsupported": "",
+		"serviceOff": "",
+		"failed": ""
+	},
+	"me": {
+		"pageTitle": "",
+		"title": "",
+		"back": "",
+		"preview": "",
+		"noNameYet": "",
+		"nicknameLabel": "",
+		"cityLabel": "",
+		"save": "",
+		"saved": "",
+		"useAuto": "",
+		"cityFailed": "",
+		"nicknameErrors": {
+			"length": "",
+			"chars": "",
+			"blocked": "",
+			"generic": ""
+		},
+		"loadFailed": "",
+		"logout": "",
+		"logoutFailed": "",
+		"deleteAccount": "",
+		"deleteConfirm": "",
+		"deleteConfirmYes": "",
+		"deleteCancel": "",
+		"deleteFailed": ""
+	},
+	"map": {
+		"house": "",
+		"myHouse": "",
+		"showAll": "",
+		"collectedLabel": ""
+	},
+	"firework": {
+		"button": "",
+		"offerTitle": "",
+		"offerBody": "",
+		"fire": "",
+		"later": "",
+		"pick": "",
+		"cancel": "",
+		"hold": "",
+		"heldNote": ""
+	},
+	"inAppBrowser": "",
+	"footer": {
+		"coffee": "",
+		"about": "",
+		"privacy": "",
+		"terms": "",
+		"contact": "",
+		"feedback": "",
+		"home": "",
+		"nav": ""
+	},
+	"feedback": {
+		"kindLabel": "",
+		"kinds": {
+			"bug": "",
+			"idea": "",
+			"other": ""
+		},
+		"messageLabel": "",
+		"placeholder": "",
+		"contactLabel": "",
+		"contactPlaceholder": "",
+		"contactHint": "",
+		"houseNote": "",
+		"privacy": "",
+		"send": "",
+		"sending": "",
+		"sent": "",
+		"again": "",
+		"invalid": "",
+		"failed": "",
+		"rateLimited": ""
+	},
+	"share": {
+		"copied": "",
+		"saveImage": "",
+		"story": {
+			"invite": "",
+			"brand": "",
+			"domain": "",
+			"text": ""
+		}
+	},
+	"email": {
+		"subject": "",
+		"preheader": "",
+		"brand": "",
+		"date": "",
+		"greeting": "",
+		"lead": "",
+		"litFor": "",
+		"more": "",
+		"mixTitle": "",
+		"count": "",
+		"houseTitle": "",
+		"house": "",
+		"houseNote": "",
+		"cta": "",
+		"closing": {
+			"0": "",
+			"1": ""
+		},
+		"footer": "",
+		"settings": "",
+		"domain": "",
+		"unsubscribe": "",
+		"setting": "",
+		"ask": "",
+		"sendsTo": "",
+		"unsubPage": {
+			"title": "",
+			"button": "",
+			"done": "",
+			"bad": ""
+		}
+	},
+	"pages": {
+		"about": {
+			"title": "",
+			"description": "",
+			"what": {
+				"0": "",
+				"1": "",
+				"2": ""
+			},
+			"keeper": "",
+			"notService": "",
+			"crisisLead": "",
+			"translate": "",
+			"translateLink": ""
+		},
+		"feedback": {
+			"title": "",
+			"description": "",
+			"lead": "",
+			"translate": "",
+			"translateLink": ""
+		},
+		"notFound": {
+			"title": "",
+			"line": "",
+			"back": ""
+		},
+		"contact": {
+			"title": "",
+			"lead": ""
+		}
+	},
+	"eggs": {
+		"meteor": {
+			"label": "",
+			"line": ""
+		},
+		"moon": {
+			"label": "",
+			"line": ""
+		},
+		"festival": {
+			"lantern": {
+				"label": "",
+				"line": ""
+			},
+			"qixi": {
+				"label": "",
+				"line": ""
+			},
+			"midautumn": {
+				"label": "",
+				"line": ""
+			},
+			"xmasEve": {
+				"label": "",
+				"line": ""
+			},
+			"xmas": {
+				"label": "",
+				"line": ""
+			},
+			"newYearEve": {
+				"label": "",
+				"line": ""
+			},
+			"birthday": {
+				"label": "",
+				"line": ""
+			}
+		},
+		"whale": {
+			"label": "",
+			"line": ""
+		},
+		"landmarks": {
+			"taipei": {
+				"name": "",
+				"line": ""
+			},
+			"newtaipei": {
+				"name": "",
+				"line": ""
+			},
+			"keelung": {
+				"name": "",
+				"line": ""
+			},
+			"taoyuan": {
+				"name": "",
+				"line": ""
+			},
+			"hsinchucity": {
+				"name": "",
+				"line": ""
+			},
+			"hsinchucounty": {
+				"name": "",
+				"line": ""
+			},
+			"miaoli": {
+				"name": "",
+				"line": ""
+			},
+			"taichung": {
+				"name": "",
+				"line": ""
+			},
+			"changhua": {
+				"name": "",
+				"line": ""
+			},
+			"nantou": {
+				"name": "",
+				"line": ""
+			},
+			"yunlin": {
+				"name": "",
+				"line": ""
+			},
+			"chiayicity": {
+				"name": "",
+				"line": ""
+			},
+			"chiayicounty": {
+				"name": "",
+				"line": ""
+			},
+			"tainan": {
+				"name": "",
+				"line": ""
+			},
+			"kaohsiung": {
+				"name": "",
+				"line": ""
+			},
+			"pingtung": {
+				"name": "",
+				"line": ""
+			},
+			"yilan": {
+				"name": "",
+				"line": ""
+			},
+			"hualien": {
+				"name": "",
+				"line": ""
+			},
+			"taitung": {
+				"name": "",
+				"line": ""
+			},
+			"penghu": {
+				"name": "",
+				"line": ""
+			},
+			"kinmen": {
+				"name": "",
+				"line": ""
+			},
+			"lienchiang": {
+				"name": "",
+				"line": ""
+			}
+		},
+		"candle": {
+			"line": ""
+		},
+		"newYear": {
+			"label": "",
+			"line": ""
+		},
+		"console": {
+			"art": "",
+			"lines": {
+				"0": "",
+				"1": ""
+			}
+		},
+		"konami": {
+			"label": ""
+		}
+	},
+	"browserSwitch": {
+		"openIn": ""
+	},
+	"og": {
+		"brand": "",
+		"lit": "",
+		"litParts": {
+			"0": "",
+			"1": ""
+		},
+		"firework": "",
+		"glow": "",
+		"city": "",
+		"newyear": {
+			"lit": "",
+			"litParts": {
+				"0": "",
+				"1": ""
+			},
+			"cityLights": "",
+			"years": ""
+		},
+		"invite": {
+			"0": "",
+			"1": ""
+		},
+		"domain": ""
+	},
+	"ogQuips": {
+		"taipei": "",
+		"newtaipei": "",
+		"keelung": "",
+		"taoyuan": "",
+		"hsinchucity": "",
+		"hsinchucounty": "",
+		"miaoli": "",
+		"taichung": "",
+		"changhua": "",
+		"nantou": "",
+		"yunlin": "",
+		"chiayicity": "",
+		"chiayicounty": "",
+		"tainan": "",
+		"kaohsiung": "",
+		"pingtung": "",
+		"yilan": "",
+		"hualien": "",
+		"taitung": "",
+		"penghu": "",
+		"kinmen": "",
+		"lienchiang": ""
+	},
+	"lights": {
+		"orange": "",
+		"amber": "",
+		"pink": "",
+		"blue": "",
+		"mint": "",
+		"orchid": "",
+		"lime": "",
+		"teal": "",
+		"dawn": "",
+		"metoo": "",
+		"unknown": ""
+	},
+	"areas": {
+		"taipei": "",
+		"newtaipei": "",
+		"keelung": "",
+		"taoyuan": "",
+		"hsinchucity": "",
+		"hsinchucounty": "",
+		"miaoli": "",
+		"taichung": "",
+		"changhua": "",
+		"nantou": "",
+		"yunlin": "",
+		"chiayicity": "",
+		"chiayicounty": "",
+		"tainan": "",
+		"kaohsiung": "",
+		"pingtung": "",
+		"yilan": "",
+		"hualien": "",
+		"taitung": "",
+		"penghu": "",
+		"kinmen": "",
+		"lienchiang": "",
+		"hk-centralwestern": "",
+		"hk-wanchai": "",
+		"hk-eastern": "",
+		"hk-southern": "",
+		"hk-yautsimmong": "",
+		"hk-shamshuipo": "",
+		"hk-kowlooncity": "",
+		"hk-wongtaisin": "",
+		"hk-kwuntong": "",
+		"hk-tsuenwan": "",
+		"hk-tuenmun": "",
+		"hk-yuenlong": "",
+		"hk-north": "",
+		"hk-taipo": "",
+		"hk-saikung": "",
+		"hk-shatin": "",
+		"hk-kwaitsing": "",
+		"hk-islands": ""
+	},
+	"names": {
+		"who": ""
+	}
+}
