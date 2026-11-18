@@ -1,0 +1,12 @@
+{
+	"name": "porchlamps-translations",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"validate": "node scripts/validate.mjs messages",
+		"stamp": "node scripts/validate.mjs messages --stamp"
+	},
+	"devDependencies": {
+		"@formatjs/icu-messageformat-parser": "3.5.23"
+	}
+}

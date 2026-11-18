@@ -1,0 +1,635 @@
+{
+	"site": {
+		"name": "留燈",
+		"title": "留燈｜回到家，留一句心情",
+		"description": "晚上回到家，匿名留一句話，會有人為你點一盞燈，燈會在 24 小時後熄滅。",
+		"ogAlt": "留燈：回到家，留一句話，會有人替你點一盞燈"
+	},
+	"legend": {
+		"open": "燈的顏色與規則",
+		"rules": {
+			"0": "這裡不聊天，只點燈。不用回，不用解釋",
+			"1": "每盞燈亮 24 小時",
+			"2": "一晚可以留一句話"
+		}
+	},
+	"hints": {
+		"house": "每天留一句話，房子會幫你記著",
+		"skipAll": "先不用"
+	},
+	"visit": {
+		"pageTitle": "房子・留燈",
+		"empty": "這棟房子還沒開燈",
+		"backTonight": "回到地圖",
+		"lit": "你點過這盞燈了",
+		"loadFailed": "連線不太穩，晚點再試",
+		"retry": "再試一次",
+		"lightFailed": "剛剛沒點成功，晚點再試",
+		"byline": "{who}・{time}",
+		"pick": "選一盞燈送給他",
+		"litNow": "燈點好了，他回來就看得到",
+		"again": "再點一盞",
+		"backMap": "回到地圖",
+		"allLit": "{daypart, select, morning {地圖上的房子今天你都為他們留燈了} day {地圖上的房子今天你都為他們留燈了} evening {地圖上的房子今晚你都為他們留燈了} other {地圖上的房子今晚你都為他們留燈了}}",
+		"returned": "{daypart, select, morning {你點過燈的人裡，今天有 {n} 位又回來了 →} day {你點過燈的人裡，今天有 {n} 位又回來了 →} evening {你點過燈的人裡，今晚有 {n} 位又回來了 →} other {你點過燈的人裡，今晚有 {n} 位又回來了 →}}",
+		"earlier": "前幾晚",
+		"report": "檢舉這則留言",
+		"reported": "已收到檢舉，謝謝",
+		"shareStory": "把這句做成卡片分享"
+	},
+	"tonight": {
+		"tagline": "晚上留一句話，會有人替你點一盞燈",
+		"whispersLabel": "{daypart, select, morning {今天別人留下的話} day {今天別人留下的話} evening {今晚別人留下的話} other {今晚別人留下的話}}",
+		"waiting": "還有 {n} 個人在等一盞燈",
+		"countShort": "{daypart, select, morning {今天 {n} 人} day {今天 {n} 人} evening {今晚 {n} 人} other {今晚 {n} 人}}",
+		"cardPosition": "{i} / {n}",
+		"nextHouse": "下一位 →",
+		"countyLights": "{daypart, select, morning {今天 {n} 盞燈} day {今天 {n} 盞燈} evening {今晚 {n} 盞燈} other {今晚 {n} 盞燈}}",
+		"countyLit": "{daypart, select, morning {今天有燈亮著} day {今天有燈亮著} evening {今晚有燈亮著} other {今晚有燈亮著}}",
+		"countyDark": "{daypart, select, morning {今天還沒有燈} day {今天還沒有燈} evening {今晚還沒有燈} other {今晚還沒有燈}}",
+		"countyEmpty": "{daypart, select, morning {{cityName}早上還沒有燈，晚上再來看看} day {{cityName}白天還沒有燈，晚上再來看看} evening {{cityName}今晚還沒有燈，晚點再來看看} other {{cityName}夜裡還沒有燈，晚一點再來看看}}",
+		"countyMine": "你",
+		"countyLitByMe": "已留燈",
+		"countyGo": "點燈 →",
+		"countFirst": "{daypart, select, morning {今天你是第一個} day {今天你是第一個} evening {今晚你是第一個} other {今晚你是第一個}}",
+		"heavy": "這句話有點沉重",
+		"mineNote": {
+			"seeYou": "訂好了，明早見"
+		},
+		"unseen": {
+			"line": "有 {n} 盞燈為你亮過",
+			"go": "去看"
+		},
+		"noLightYet": "{daypart, select, morning {這句話會亮 24 小時，晚上再來看看誰來過} day {這句話會亮 24 小時，晚上再來看看誰來過} evening {這句話會亮 24 小時，明天再來看看誰來過} other {這句話會亮 24 小時，睡醒再來看看誰來過}}",
+		"nthLight": "第 {n} 次替你點燈了",
+		"litBefore": "你之前點過他的燈",
+		"litBeforeNamed": "你替{nickname}點過 {times} 次燈",
+		"empty": "{daypart, select, morning {早上比較安靜，夜裡的話都看完了} day {白天比較安靜，晚上再回來看看} evening {今晚的都看完了，晚點再來看看} other {夜裡很安靜，晚一點再回來看看}}",
+		"quiet": "{daypart, select, morning {早上還很安靜。你要當第一個回家的人嗎？} day {白天還很安靜。你要當第一個回家的人嗎？} evening {今晚還很安靜。你要當第一個回家的人嗎？} other {夜裡很安靜。你要當第一個回家的人嗎？}}",
+		"quietSay": "留下第一句",
+		"loading": "{daypart, select, morning {正在讀今天的話} day {正在讀今天的話} evening {正在讀今晚的話} other {正在讀今晚的話}}",
+		"loadFailed": "連線不太穩，晚點再試",
+		"litFor": "替{cityName}點了一盞燈",
+		"yourTurn": "{daypart, select, morning {換你留一句？今天也會有人替你點燈} day {換你留一句？今天也會有人替你點燈} evening {換你留一句？今晚也會有人替你點燈} other {換你留一句？今晚也會有人替你點燈}}",
+		"yourTurnSay": "留一句",
+		"mine": "{cityName}・你",
+		"chipLights": "{n} 盞燈"
+	},
+	"actions": {
+		"house": "我的房子",
+		"houseUnseen": "我的房子，有新的燈亮了",
+		"me": "我",
+		"say": "今天想說什麼",
+		"light": "點燈",
+		"prev": "上一句",
+		"next": "下一句",
+		"hideCards": "先收起留言",
+		"showCards": "打開留言，還有 {n} 句",
+		"more": "更多",
+		"report": "檢舉",
+		"share": "邀朋友來點燈",
+		"edit": "修改",
+		"collapse": "收起",
+		"send": "送出",
+		"close": "關閉",
+		"back": "返回",
+		"backTonight": "回到地圖",
+		"retry": "再試一次"
+	},
+	"compose": {
+		"label": "{daypart, select, morning {今天想說的一句話} day {今天想說的一句話} evening {今晚想說的一句話} other {今晚想說的一句話}}",
+		"placeholders": {
+			"0": "今天加班到現在……",
+			"1": "想家了",
+			"2": "其實沒什麼，只是想有人知道"
+		},
+		"starters": {
+			"0": "今天好累",
+			"1": "想回家",
+			"2": "睡不著",
+			"3": "有件開心的事"
+		},
+		"count": "{n}/{max}",
+		"countLabel": "已經寫了 {n} 個字，最多 {max} 個字",
+		"cityOnly": "只會顯示縣市",
+		"share": {
+			"label": "這句可以被做成卡片分享出去",
+			"hint": "卡片上不會有你的名字和縣市；分享出去的圖收不回來"
+		},
+		"sticker": {
+			"open": "加一張貼圖",
+			"change": "貼圖：{name}，點一下換或拿掉",
+			"tray": "選一張貼圖",
+			"remove": "不要貼圖"
+		}
+	},
+	"stickers": {
+		"tea": "熱茶",
+		"moon": "月亮與星星",
+		"cat": "睡著的貓",
+		"umbrella": "雨傘",
+		"noodles": "泡麵",
+		"blanket": "棉被",
+		"house": "亮著燈的小房子",
+		"laptop": "還開著的筆電",
+		"boba": "珍珠奶茶",
+		"scooter": "機車",
+		"sprout": "小芽",
+		"lantern": "燈籠"
+	},
+	"city": {
+		"pick": "你現在在哪個縣市"
+	},
+	"login": {
+		"google": "用 Google 登入",
+		"header": "登入",
+		"inApp": "請改用 Safari 或 Chrome 打開才能登入",
+		"copyLink": "複製連結",
+		"copied": "已複製",
+		"email": {
+			"lead": "明早用 email 告訴你誰為你點了燈",
+			"button": "用 Google 收早上的信"
+		}
+	},
+	"handoff": {
+		"open": "用 {browser} 打開，房子跟著走",
+		"fallback": "沒有打開的話，複製連結到 {browser} 貼上",
+		"title": "這是你的房子嗎？",
+		"yourLine": "這棟房子最近說的一句",
+		"noLine": "這棟房子還沒有說過話",
+		"yes": "是，帶過來",
+		"no": "不是",
+		"invalid": "這個連結已經失效了。回到原本的 App 再按一次就好。",
+		"failed": "沒有成功，晚點再試一次"
+	},
+	"morning": {
+		"greeting": "早安",
+		"nightPassed": "夜裡有 {n} 盞燈來過",
+		"whileAway": "你不在的時候，有 {n} 盞燈來過",
+		"nth": "第 {n} 次替你點燈",
+		"enter": "看看我的房子"
+	},
+	"house": {
+		"pageTitle": "我的房子・留燈",
+		"share": {
+			"label": "這句可以被做成卡片分享出去",
+			"heavy": "這句不會被做成卡片"
+		},
+		"returned": "{daypart, select, morning {你點過燈的人裡，今天有 {n} 位又回來了} day {你點過燈的人裡，今天有 {n} 位又回來了} evening {你點過燈的人裡，今晚有 {n} 位又回來了} other {你點過燈的人裡，今晚有 {n} 位又回來了}}",
+		"lightAgain": "{who}，去替他再點一盞燈",
+		"windowDate": "{m}/{d}",
+		"windowReceived": "{n, plural, =0 {還沒有燈} other {{n} 盞}}",
+		"windowOpen": "{m} 月 {d} 日，收到 {n} 盞燈",
+		"nightNoLight": "這一晚沒有燈，窗還是亮著",
+		"nightLoadFailed": "暫時打不開這一晚，晚點再試",
+		"recentTitle": "收到的燈",
+		"recentEmpty": "這 24 小時還沒有燈",
+		"moreLights": "再看 {n} 盞",
+		"morePeople": "再看 {n} 位",
+		"fold": "收起",
+		"recentFrom": "{who}",
+		"recentFromCity": "{city}的一盞燈",
+		"agoMinutes": "{minutes} 分鐘前",
+		"agoHours": "{hours} 小時前",
+		"hoursLeft": "{h, plural, =0 {快熄了} other {還會亮 {h} 小時}}",
+		"legendTitle": "燈的顏色",
+		"collected": "{n} / {total}",
+		"saveHouse": "登入之後，換了手機，房子也還在",
+		"saveHouseLater": "先不用",
+		"day": "第 {n} 天",
+		"growNext": "再 {left} 個晚上，{id, select, plant {門邊會多一盆小植物} lamp {門邊會亮起一盞小燈} smoke {煙囪會飄出一縷煙} tree {院子裡會長出一棵樹} cat {門口會來一隻貓} star {屋頂上會多一顆星星} other {}}",
+		"received": "盞燈照過你的房子",
+		"given": "盞燈是你替別人點的",
+		"collectionTitle": "燈從這些地方來",
+		"noHouse": "這裡還沒有你的房子，留一句話，第一扇窗就會亮起來",
+		"loadFailed": "暫時打不開房子，晚點再試",
+		"publicLabel": "讓別人逛我的房子",
+		"publicAsk": "要讓別人逛你的房子嗎",
+		"publicYes": "好，讓大家逛",
+		"publicNo": "先不用",
+		"publicFailed": "暫時沒辦法更改，晚點再試"
+	},
+	"install": {
+		"add": "加到主畫面",
+		"iosTitle": "加到主畫面",
+		"iosSteps": {
+			"0": "點瀏覽器的分享按鈕",
+			"1": "往下找到「加入主畫面」"
+		},
+		"iosWhy": "明天醒來，點一下就能回來看燈",
+		"iosDone": "知道了"
+	},
+	"push": {
+		"light": "{city}有人替你點了一盞『{label}』",
+		"lightAnon": "有人替你點了一盞燈",
+		"morning": "有 {n} 盞燈為你亮過",
+		"evening": "到家了嗎？今晚想說點什麼",
+		"ask": "有人點燈時通知我",
+		"wantsLights": "有人點燈時通知我",
+		"wantsEvening": "晚上提醒我回來留句話",
+		"sectionTitle": "通知",
+		"denied": "通知權限被關掉了，請到瀏覽器設定打開",
+		"needsInstall": "要先加到主畫面、從那裡打開，才收得到通知",
+		"unsupported": "這個瀏覽器不支援通知",
+		"serviceOff": "瀏覽器的推播服務沒有開，請到隱私設定打開",
+		"failed": "設定失敗，晚點再試"
+	},
+	"me": {
+		"pageTitle": "我・留燈",
+		"title": "我",
+		"back": "回到房子",
+		"preview": "別人看到的樣子",
+		"noNameYet": "還沒取名字",
+		"nicknameLabel": "你的名字",
+		"cityLabel": "你的縣市",
+		"save": "儲存",
+		"saved": "已儲存",
+		"useAuto": "用回「{auto}」",
+		"cityFailed": "更新失敗，晚點再試",
+		"nicknameErrors": {
+			"length": "名字最多 8 個中文字或 16 個英文字母",
+			"chars": "名字只能用中文字、英文字母和「・」",
+			"blocked": "這個名字不能用，請換一個",
+			"generic": "改名失敗，晚點再試"
+		},
+		"loadFailed": "讀取資料失敗，晚點再試",
+		"logout": "登出",
+		"logoutFailed": "登出失敗，晚點再試",
+		"deleteAccount": "刪除帳號",
+		"deleteConfirm": "房子和所有的燈都會清掉，沒辦法復原",
+		"deleteConfirmYes": "確定刪除",
+		"deleteCancel": "取消",
+		"deleteFailed": "刪除失敗，晚點再試"
+	},
+	"map": {
+		"house": "去這棟房子看看",
+		"myHouse": "我的房子",
+		"showAll": "看全部",
+		"collectedLabel": "{count, plural, =0 {還沒收到其他縣市的燈} other {已收到這些縣市的燈：{cityNames}}}"
+	},
+	"firework": {
+		"button": "放煙火",
+		"offerTitle": "你點亮了 {n} 盞燈",
+		"offerBody": "送你一朵煙火",
+		"fire": "選一個縣市放",
+		"later": "晚點再放",
+		"pick": "點一個縣市放煙火",
+		"cancel": "取消"
+	},
+	"inAppBrowser": "請改用 Safari 或 Chrome 打開網頁，才能使用 Google 登入",
+	"footer": {
+		"coffee": "請作者喝杯咖啡",
+		"about": "關於",
+		"privacy": "隱私權政策",
+		"terms": "使用條款",
+		"contact": "聯絡",
+		"feedback": "意見回饋",
+		"home": "回到地圖",
+		"nav": "網站資訊"
+	},
+	"feedback": {
+		"kindLabel": "想說的是",
+		"kinds": {
+			"bug": "哪裡壞掉了",
+			"idea": "想要的功能或建議",
+			"other": "其他想說的"
+		},
+		"messageLabel": "內容",
+		"placeholder": "在哪個畫面、做了什麼、發生了什麼，寫得出來的就好。",
+		"contactLabel": "聯絡方式（選填）",
+		"contactPlaceholder": "Email 或 Threads 帳號",
+		"contactHint": "需要問你細節時才會用到，不留也可以。",
+		"houseNote": "如果你有房子，會一起附上房子的代號，方便作者去看看。",
+		"privacy": "送出的內容只會存在作者私人的 GitHub 專案裡，只有作者看得到。",
+		"send": "送出",
+		"sending": "送出中",
+		"sent": "收到了，謝謝你。",
+		"again": "再寫一則",
+		"invalid": "還沒送出：內容太短或太長，改一下再送一次。",
+		"failed": "現在送不出去，晚點再試，或寫信到 {email}",
+		"rateLimited": "這一小時送得有點多了，晚點再試，或寫信到 {email}"
+	},
+	"share": {
+		"copied": "已複製",
+		"saveImage": "存下這張圖",
+		"story": {
+			"invite": "回到家，也留一句",
+			"brand": "留燈",
+			"domain": "porchlamps.app",
+			"text": "回到家，也留一句話"
+		}
+	},
+	"email": {
+		"subject": "有 {n} 盞燈為你亮過",
+		"preheader": "昨晚你睡著以後，有人經過你家門口。",
+		"brand": "留燈",
+		"date": "{month} 月 {day} 日・星期{weekday, select, 0 {日} 1 {一} 2 {二} 3 {三} 4 {四} 5 {五} other {六}}",
+		"greeting": "早安。",
+		"lead": "昨晚你睡著以後，有人經過你家門口，替你點了燈。",
+		"litFor": "盞燈為你亮過",
+		"more": "＋{n}",
+		"mixTitle": "有人想對你說",
+		"count": "{n} 盞",
+		"houseTitle": "你的房子",
+		"house": "有 <n>{windows}</n> 扇窗，一共亮過 <n>{total}</n> 盞燈。",
+		"houseNote": "每一晚都留在房子裡。",
+		"cta": "回房子看看",
+		"closing": {
+			"0": "今天也慢慢來。",
+			"1": "晚上回到家，房子會在這裡等你。"
+		},
+		"footer": "這封信只寫給你：不會有你寫的話，也不會有別人的名字。你在個人頁打開了「早上用 email 通知我」，所以收到這封。",
+		"settings": "通知設定",
+		"domain": "porchlamps.app",
+		"unsubscribe": "取消訂閱早上的信",
+		"setting": "早上用 email 通知我",
+		"ask": "早上用 email 告訴我",
+		"sendsTo": "寄到 {email}",
+		"unsubPage": {
+			"title": "取消訂閱早上的信",
+			"button": "確定取消",
+			"done": "已經取消訂閱了。之後想再收，到個人頁打開就可以。",
+			"bad": "這個連結不完整，請到個人頁關閉通知。"
+		}
+	},
+	"pages": {
+		"about": {
+			"title": "關於留燈",
+			"description": "留燈是一個安靜的小地方：晚上睡不著的時候留一句話，會有人默默替你點一盞燈。沒有真實姓名，也不用追蹤誰。",
+			"what": {
+				"0": "留燈是一個安靜的小地方：晚上睡不著的時候，來這裡留一句話，會有人默默替你點一盞燈。",
+				"1": "這裡沒有真實姓名、沒有大頭貼，也不用追蹤誰。留下的話和燈只在首頁亮 24 小時。",
+				"2": "點了 3 盞燈，就可以為一個縣市放一朵煙火，不會留下名字。一個縣市裡每一則心情都有人點了燈，那裡的地面會亮起來。"
+			},
+			"keeper": "有位守燈人會留意每句話，盡量讓每個人都能收到一盞燈。",
+			"notService": "留燈不是諮商或危機處理服務。",
+			"crisisLead": "如果現在需要有人陪你說說話："
+		},
+		"feedback": {
+			"title": "意見回饋",
+			"description": "網站哪裡怪怪的、想要什麼功能，都可以在這裡告訴作者。",
+			"lead": "網站哪裡怪怪的、想要什麼功能，或只是想跟作者說點什麼，都可以寫在這裡。"
+		},
+		"notFound": {
+			"title": "這裡沒有房子",
+			"line": "這條路好像走錯了，不過門口的燈還亮著",
+			"back": "回到地圖"
+		},
+		"contact": {
+			"title": "聯絡作者",
+			"lead": "有問題、想更正或申訴，請寫信到"
+		}
+	},
+	"eggs": {
+		"meteor": {
+			"label": "流星",
+			"line": "看到了嗎，許個願吧"
+		},
+		"moon": {
+			"label": "月亮",
+			"line": "月亮上的兔子也還醒著"
+		},
+		"festival": {
+			"lantern": {
+				"label": "元宵",
+				"line": "今晚是元宵，湯圓記得趁熱吃"
+			},
+			"qixi": {
+				"label": "七夕",
+				"line": "今晚是七夕，鵲橋也亮著"
+			},
+			"midautumn": {
+				"label": "中秋",
+				"line": "今晚月亮很圓"
+			},
+			"xmasEve": {
+				"label": "平安夜",
+				"line": "今晚是平安夜，願你平安"
+			},
+			"xmas": {
+				"label": "聖誕節",
+				"line": "聖誕快樂，今天也辛苦了"
+			},
+			"newYearEve": {
+				"label": "跨年",
+				"line": "今年最後一晚，今晚也有人為你留燈"
+			},
+			"birthday": {
+				"label": "留燈的生日",
+				"line": "今天是留燈的生日，謝謝你來"
+			}
+		},
+		"whale": {
+			"label": "鯨魚",
+			"line": "牠只是路過，跟你打聲招呼"
+		},
+		"landmarks": {
+			"taipei": {
+				"name": "台北 101",
+				"line": "101 也還醒著，它說它只是在等跨年"
+			},
+			"newtaipei": {
+				"name": "淡水情人橋",
+				"line": "新北太大了，從這頭走到那頭，天都亮了"
+			},
+			"keelung": {
+				"name": "正濱漁港",
+				"line": "基隆今天又下雨了吧，我們都知道"
+			},
+			"taoyuan": {
+				"name": "桃園機場",
+				"line": "飛機還在飛，不過你今晚哪裡都不用去"
+			},
+			"hsinchucity": {
+				"name": "東門城",
+				"line": "新竹的風很大，帽子記得抓好"
+			},
+			"hsinchucounty": {
+				"name": "內灣小火車",
+				"line": "內灣的小火車收工了，你也是"
+			},
+			"miaoli": {
+				"name": "龍騰斷橋",
+				"line": "苗栗在這裡，真的在這裡"
+			},
+			"taichung": {
+				"name": "台中歌劇院",
+				"line": "台中人表示：我們只是在路上"
+			},
+			"changhua": {
+				"name": "八卦山大佛",
+				"line": "大佛看著彰化很多年了，今晚也是"
+			},
+			"nantou": {
+				"name": "玉山",
+				"line": "玉山上很冷，你那邊有蓋被子嗎"
+			},
+			"yunlin": {
+				"name": "西螺大橋",
+				"line": "雲林的夜很暗，所以星星很多"
+			},
+			"chiayicity": {
+				"name": "嘉義噴水池",
+				"line": "雞肉飯明天再吃一碗吧"
+			},
+			"chiayicounty": {
+				"name": "阿里山小火車",
+				"line": "阿里山上，已經有人在等日出了"
+			},
+			"tainan": {
+				"name": "赤崁樓",
+				"line": "台南的宵夜還開著，你懂的"
+			},
+			"kaohsiung": {
+				"name": "85 大樓",
+				"line": "高雄現在還是很熱，對吧"
+			},
+			"pingtung": {
+				"name": "船帆石",
+				"line": "屏東很長，從頭開到尾要很久"
+			},
+			"yilan": {
+				"name": "龜山島",
+				"line": "宜蘭人好像都很早睡，羨慕"
+			},
+			"hualien": {
+				"name": "清水斷崖",
+				"line": "花蓮的山很高，星星也很近"
+			},
+			"taitung": {
+				"name": "鹿野熱氣球",
+				"line": "熱氣球先降落了，明天再飛"
+			},
+			"penghu": {
+				"name": "跨海大橋",
+				"line": "澎湖的風一直都在，今晚也是"
+			},
+			"kinmen": {
+				"name": "風獅爺",
+				"line": "風獅爺守著金門，也幫你看著門口"
+			},
+			"lienchiang": {
+				"name": "芹壁聚落",
+				"line": "馬祖很遠，不過夜色是一樣的"
+			}
+		},
+		"candle": {
+			"line": "風好大，不過它還是會亮"
+		},
+		"newYear": {
+			"label": "新年",
+			"line": "新年快樂"
+		},
+		"console": {
+			"art": "    )\n   (\n  .-.\n  | |\n  | |\n _|_|_",
+			"lines": {
+				"0": "你也還醒著嗎。",
+				"1": "這裡沒有後台可以偷看，只有燈。"
+			}
+		},
+		"konami": {
+			"label": "像素的台灣夜景，點一下就關掉"
+		}
+	},
+	"browserSwitch": {
+		"openIn": "用 {browser} 打開，房子才留得住"
+	},
+	"og": {
+		"brand": "留燈",
+		"lit": "今晚我替 {n} 個人點了燈",
+		"litParts": {
+			"0": "今晚我替",
+			"1": "個人點了燈"
+		},
+		"firework": "今晚我在{city}的夜空放了一朵煙火",
+		"glow": "今晚{city}每一則心情都有人點了燈",
+		"city": "{cityName}",
+		"invite": {
+			"0": "回到家，留一句話",
+			"1": "會有人替你點一盞燈"
+		},
+		"domain": "porchlamps.app"
+	},
+	"ogQuips": {
+		"taipei": "台北人下班了，順手點了幾盞燈",
+		"newtaipei": "新北人通勤的路上，也點了燈",
+		"keelung": "基隆在下雨，燈照樣點",
+		"taoyuan": "桃園的飛機還在飛，燈也還亮著",
+		"hsinchucity": "新竹的工程師們，點完燈該睡了",
+		"hsinchucounty": "竹北的夜，也有燈",
+		"miaoli": "苗栗確實存在，而且點了燈",
+		"taichung": "台中人表示：我們只是在路上",
+		"changhua": "彰化人點完燈，去吃肉圓了",
+		"nantou": "南投的山裡，也有人醒著",
+		"yunlin": "雲林的夜很暗，燈特別清楚",
+		"chiayicity": "點完燈，來一碗雞肉飯",
+		"chiayicounty": "阿里山腳下，也有人還沒睡",
+		"tainan": "台南的宵夜還開著，燈也是",
+		"kaohsiung": "高雄的夜很熱，燈也很暖",
+		"pingtung": "屏東很長，燈從北點到南",
+		"yilan": "宜蘭人好像都很早睡，我沒有",
+		"hualien": "花蓮的山很高，燈也看得到",
+		"taitung": "台東的夜很安靜，燈很清楚",
+		"penghu": "澎湖風很大，燈沒有被吹熄",
+		"kinmen": "風獅爺看著，金門也點了燈",
+		"lienchiang": "馬祖很遠，燈還是亮了"
+	},
+	"lights": {
+		"orange": "辛苦了",
+		"amber": "我懂你",
+		"pink": "抱抱你",
+		"blue": "我也醒著",
+		"mint": "替你開心",
+		"orchid": "你很棒",
+		"lime": "慢慢來",
+		"teal": "好好睡",
+		"dawn": "早安",
+		"metoo": "我也是",
+		"unknown": "一盞燈"
+	},
+	"areas": {
+		"taipei": "台北",
+		"newtaipei": "新北",
+		"keelung": "基隆",
+		"taoyuan": "桃園",
+		"hsinchucity": "新竹市",
+		"hsinchucounty": "新竹縣",
+		"miaoli": "苗栗",
+		"taichung": "台中",
+		"changhua": "彰化",
+		"nantou": "南投",
+		"yunlin": "雲林",
+		"chiayicity": "嘉義市",
+		"chiayicounty": "嘉義縣",
+		"tainan": "台南",
+		"kaohsiung": "高雄",
+		"pingtung": "屏東",
+		"yilan": "宜蘭",
+		"hualien": "花蓮",
+		"taitung": "台東",
+		"penghu": "澎湖",
+		"kinmen": "金門",
+		"lienchiang": "連江",
+		"hk-centralwestern": "中西區",
+		"hk-wanchai": "灣仔",
+		"hk-eastern": "東區",
+		"hk-southern": "南區",
+		"hk-yautsimmong": "油尖旺",
+		"hk-shamshuipo": "深水埗",
+		"hk-kowlooncity": "九龍城",
+		"hk-wongtaisin": "黃大仙",
+		"hk-kwuntong": "觀塘",
+		"hk-tsuenwan": "荃灣",
+		"hk-tuenmun": "屯門",
+		"hk-yuenlong": "元朗",
+		"hk-north": "北區",
+		"hk-taipo": "大埔",
+		"hk-saikung": "西貢",
+		"hk-shatin": "沙田",
+		"hk-kwaitsing": "葵青",
+		"hk-islands": "離島"
+	},
+	"names": {
+		"who": "{area}的{nickname}"
+	}
+}

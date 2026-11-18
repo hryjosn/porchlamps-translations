@@ -1,0 +1,17 @@
+# 安全相關的字（危機提示、專線、歡迎畫面、規則提示、隱私權政策、條款）一定要作者逐字核准
+**/safety.json @hryjosn
+**/safety.hashes.json @hryjosn
+# 中文原文只由主 repo 匯出，不收 PR
+/messages/zh-TW/ @hryjosn
+/scripts/ @hryjosn
+/.github/ @hryjosn
+/safety-keys.json @hryjosn
+/CODEOWNERS @hryjosn
+# 檢查器的設定：改了可以讓 CI 失去作用
+/package.json @hryjosn
+/package-lock.json @hryjosn
+/.nvmrc @hryjosn
+/README.md @hryjosn
+/CONTRIBUTING.md @hryjosn
+/STALE.md @hryjosn
+/messages/*/safety.hashes.json @hryjosn
