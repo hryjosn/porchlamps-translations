@@ -119,10 +119,10 @@
 		},
 		"count": "{n}/{max}",
 		"countLabel": "已經寫了 {n} 個字，最多 {max} 個字",
-		"cityOnly": "只會顯示縣市",
+		"cityOnly": "{region, select, hk {只會顯示地區} many {只會顯示所在的地方} other {只會顯示縣市}}",
 		"share": {
 			"label": "這句可以被做成卡片分享出去",
-			"hint": "卡片上不會有你的名字和縣市；分享出去的圖收不回來"
+			"hint": "{region, select, hk {卡片上不會有你的名字和地區；分享出去的圖收不回來} many {卡片上不會有你的名字和所在的地方；分享出去的圖收不回來} other {卡片上不會有你的名字和縣市；分享出去的圖收不回來}}"
 		},
 		"sticker": {
 			"open": "加一張貼圖",
@@ -146,7 +146,11 @@
 		"lantern": "燈籠"
 	},
 	"city": {
-		"pick": "你現在在哪個縣市"
+		"pick": "{scope, select, many {你現在在哪裡} other {你現在在哪個縣市}}",
+		"region": {
+			"tw": "台灣",
+			"hk": "香港"
+		}
 	},
 	"login": {
 		"google": "用 Google 登入",
@@ -179,6 +183,7 @@
 	},
 	"house": {
 		"pageTitle": "我的房子・留燈",
+		"invitedCount": "有 {n} 個人因為你來了",
 		"share": {
 			"label": "這句可以被做成卡片分享出去",
 			"heavy": "這句不會被做成卡片"
@@ -249,7 +254,7 @@
 		"preview": "別人看到的樣子",
 		"noNameYet": "還沒取名字",
 		"nicknameLabel": "你的名字",
-		"cityLabel": "你的縣市",
+		"cityLabel": "{region, select, hk {你的地區} many {你所在的地方} other {你的縣市}}",
 		"save": "儲存",
 		"saved": "已儲存",
 		"useAuto": "用回「{auto}」",
@@ -258,6 +263,7 @@
 			"length": "名字最多 8 個中文字或 16 個英文字母",
 			"chars": "名字只能用中文字、英文字母和「・」",
 			"blocked": "這個名字不能用，請換一個",
+			"area": "{region, select, hk {名字不用帶地區，會自動顯示} many {名字不用帶所在的地方，會自動顯示} other {名字不用帶縣市，會自動顯示}}",
 			"generic": "改名失敗，晚點再試"
 		},
 		"loadFailed": "讀取資料失敗，晚點再試",
@@ -273,20 +279,31 @@
 		"house": "去這棟房子看看",
 		"myHouse": "我的房子",
 		"showAll": "看全部",
-		"collectedLabel": "{count, plural, =0 {還沒收到其他縣市的燈} other {已收到這些縣市的燈：{cityNames}}}"
+		"collectedLabel": "{scope, select, many {{count, plural, =0 {還沒收到其他地方的燈} other {已收到這些地方的燈：{cityNames}}}} other {{count, plural, =0 {還沒收到其他縣市的燈} other {已收到這些縣市的燈：{cityNames}}}}}"
 	},
 	"firework": {
 		"button": "放煙火",
 		"offerTitle": "你點亮了 {n} 盞燈",
 		"offerBody": "送你一朵煙火",
-		"fire": "選一個縣市放",
+		"failed": "沒送出去，再試一次",
+		"fire": "{scope, select, many {選一個地方放} other {選一個縣市放}}",
 		"later": "晚點再放",
-		"pick": "點一個縣市放煙火",
+		"pick": "{scope, select, many {點一個地方放煙火} other {點一個縣市放煙火}}",
 		"cancel": "取消",
 		"hold": "留到跨年一起放",
-		"heldNote": "已經留好了，00:00 一起放"
+		"heldNote": "已經留好了，00:00 一起放",
+		"giftInvitedTitle": "有人送你一朵煙火",
+		"giftInvitedBody": "七天內都可以放",
+		"giftInviterTitle": "有人因為你來了",
+		"giftInviterBody": "送你一朵煙火",
+		"giftMore": "還有 {n} 朵"
 	},
 	"inAppBrowser": "請改用 Safari 或 Chrome 打開網頁，才能使用 Google 登入",
+	"error": {
+		"title": "畫面卡住了",
+		"line": "重新整理一下就好，你的房子和燈都還在",
+		"reload": "重新整理"
+	},
 	"footer": {
 		"coffee": "請作者喝杯咖啡",
 		"about": "關於",
@@ -321,6 +338,10 @@
 	},
 	"share": {
 		"copied": "已複製",
+		"fireworkButton": "分享這朵煙火",
+		"glowButton": "分享這片亮光",
+		"litText": "今晚我替 {n} 個人點了燈，你也來點一盞",
+		"newyearLitText": "今年最後一晚，我為 {n} 個人點了燈，你也來點一盞",
 		"saveImage": "存下這張圖",
 		"story": {
 			"invite": "回到家，也留一句",
@@ -369,7 +390,8 @@
 			"what": {
 				"0": "留燈是一個安靜的小地方：晚上睡不著的時候，來這裡留一句話，會有人默默替你點一盞燈。",
 				"1": "這裡沒有真實姓名、沒有大頭貼，也不用追蹤誰。留下的話和燈只在首頁亮 24 小時。",
-				"2": "點了 3 盞燈，就可以為一個縣市放一朵煙火，不會留下名字。一個縣市裡每一則心情都有人點了燈，那裡的地面會亮起來。"
+				"2": "點了 3 盞燈，就可以為一個縣市放一朵煙火，不會留下名字。一個縣市裡每一則心情都有人點了燈，那裡的地面會亮起來。",
+				"3": "你可以邀朋友來留燈。朋友留下第一句話之後，你們兩邊各會收到一朵煙火，七天內都可以放。連結不會讓朋友找到你的房子或你留的話，你也不會知道哪一句是他留的。"
 			},
 			"keeper": "有位守燈人會留意每句話，盡量讓每個人都能收到一盞燈。",
 			"notService": "留燈不是諮商或危機處理服務。",
