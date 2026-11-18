@@ -4,7 +4,13 @@
 // 用法：node scripts/validate.mjs <messages 資料夾>（安全鍵清單在它旁邊的 safety-keys.json）。
 //       node scripts/validate.mjs <messages 資料夾> --changed-files <檔>：Crowdin 的 PR 只能改各語言的訊息檔（檔內每行一個路徑）。
 //       node scripts/validate.mjs <messages 資料夾> --stamp <語言>：翻完安全字後記下照哪一版原文翻的（safety.hashes.json）。
-import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import {
+	existsSync,
+	readdirSync,
+	readFileSync,
+	realpathSync,
+	writeFileSync,
+} from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { parse, TYPE } from '@formatjs/icu-messageformat-parser';
@@ -223,9 +229,10 @@ const main = (
 	process.exit(failed ? 1 : 0);
 };
 
+// 直接執行時才跑；比對真實路徑（macOS 的 /var 是 /private/var 的捷徑，不展開就永遠不相等、什麼都不做）
 if (
 	process.argv[1] &&
-	import.meta.url === pathToFileURL(resolve(process.argv[1])).href
+	import.meta.url === pathToFileURL(realpathSync(process.argv[1])).href
 ) {
 	const dir = process.argv[2];
 	if (!dir) {
