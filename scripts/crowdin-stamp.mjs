@@ -4,15 +4,24 @@
 // stamp.yml 帶著寫入 token，從 main 取這兩個檔來跑，不 npm ci、不執行 PR 裡的程式碼。
 // 用法（翻譯 repo 根目錄、PR head 的工作目錄）：node <腳本> --base origin/main --out comment.md [--check-scope]
 import { execFileSync } from 'node:child_process';
-import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import {
+	existsSync,
+	readdirSync,
+	readFileSync,
+	realpathSync,
+	writeFileSync,
+} from 'node:fs';
+import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { crowdinScopeErrors, hashString, isLocaleDirName } from './rules.mjs';
 
 /** @typedef {Record<string, string>} Flat */
 
-/** Crowdin 機器人的 commit author（`git log --author` 是部分比對） */
-export const CROWDIN_AUTHOR = 'crowdin';
+/**
+ * Crowdin 的 commit 訊息（「New translations safety.json (English)」）。Crowdin 的 GitHub 整合用作者自己的帳號（OAuth）提交，
+ * 作者名稱認不出來，只能靠訊息；只看還沒合進 main 的 commit（`<base>..HEAD`），已合併的舊 commit 不算。
+ */
+export const CROWDIN_COMMIT_MESSAGE = '^New translations ';
 
 /**
  * 只替這次改到的安全字 stamp；原文在 Crowdin 寫入譯文之後又改過的先不 stamp（held），等 Crowdin 重新同步。
@@ -133,8 +142,8 @@ const main = (/** @type {string} */ baseRef, /** @type {string} */ outFile) => {
 			'log',
 			'-1',
 			'--format=%H',
-			'--regexp-ignore-case',
-			`--author=${CROWDIN_AUTHOR}`,
+			`--grep=${CROWDIN_COMMIT_MESSAGE}`,
+			`${baseRef}..HEAD`,
 			'--',
 			safetyPath,
 		]).trim();
@@ -169,9 +178,10 @@ const main = (/** @type {string} */ baseRef, /** @type {string} */ outFile) => {
 	writeFileSync(outFile, comments.join('\n'));
 };
 
+// 直接執行時才跑；比對真實路徑（macOS 的 /var 是 /private/var 的捷徑，不展開就永遠不相等、什麼都不做）
 if (
 	process.argv[1] &&
-	import.meta.url === pathToFileURL(resolve(process.argv[1])).href
+	import.meta.url === pathToFileURL(realpathSync(process.argv[1])).href
 ) {
 	const arg = (/** @type {string} */ name) => {
 		const i = process.argv.indexOf(name);
