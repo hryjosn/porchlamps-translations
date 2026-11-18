@@ -5,6 +5,11 @@
 # 不要改成 update_without_changes／update_as_unapproved（主 repo 的 lib/i18n/crowdinTemplate.test.ts 守著）。
 preserve_hierarchy: true
 
+# Crowdin 的預設 commit 訊息是「New translations … [ci skip]」：validate、stamp 都不會跑，main 的規則要求的 validate 永遠等不到。
+# 換成自己的訊息、不附加預設的：開頭保持「New translations 」，scripts/crowdin-stamp.mjs 靠它認出 Crowdin 的 commit。
+commit_message: "New translations %original_file_name% (%language%)"
+append_commit_message: false
+
 files:
   - source: /messages/zh-TW/ui.json
     translation: /messages/%locale%/ui.json
