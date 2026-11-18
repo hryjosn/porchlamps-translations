@@ -1,0 +1,157 @@
+{
+	"welcome": {
+		"cards": {
+			"0": "",
+			"1": "",
+			"2": ""
+		},
+		"say": "",
+		"browse": "",
+		"skip": "",
+		"next": "",
+		"position": ""
+	},
+	"blocked": {
+		"contact": "",
+		"empty": "",
+		"too_long": "",
+		"already_posted": "",
+		"generic": ""
+	},
+	"crisis": {
+		"lead": "",
+		"invite": "",
+		"keep": "",
+		"after": ""
+	},
+	"hotlines": {
+		"label": "",
+		"tw": {
+			"0": {
+				"name": "",
+				"hours": ""
+			},
+			"1": {
+				"name": "",
+				"hours": ""
+			}
+		}
+	},
+	"pages": {
+		"privacy": {
+			"title": "",
+			"description": "",
+			"effective": "",
+			"intro": "",
+			"storedTitle": "",
+			"stored": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": "",
+				"5": "",
+				"6": "",
+				"7": "",
+				"8": "",
+				"9": ""
+			},
+			"purposeTitle": "",
+			"purpose": "",
+			"keepTitle": "",
+			"keep": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"whoSeesTitle": "",
+			"whoSees": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"servicesTitle": "",
+			"servicesLead": "",
+			"services": {
+				"0": {
+					"name": "",
+					"use": "",
+					"url": ""
+				},
+				"1": {
+					"name": "",
+					"use": "",
+					"url": ""
+				},
+				"2": {
+					"name": "",
+					"use": "",
+					"url": ""
+				},
+				"3": {
+					"name": "",
+					"use": "",
+					"url": ""
+				},
+				"4": {
+					"name": "",
+					"use": "",
+					"url": ""
+				},
+				"5": {
+					"name": "",
+					"use": "",
+					"url": ""
+				},
+				"6": {
+					"name": "",
+					"use": "",
+					"url": ""
+				}
+			},
+			"rightsTitle": "",
+			"rights": "",
+			"deleteLink": "",
+			"rightsMail": "",
+			"changesTitle": "",
+			"changes": ""
+		},
+		"terms": {
+			"title": "",
+			"description": "",
+			"effective": "",
+			"intro": "",
+			"whoTitle": "",
+			"who": "",
+			"dontTitle": "",
+			"dont": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": ""
+			},
+			"wordsTitle": "",
+			"words": "",
+			"careTitle": "",
+			"care": {
+				"0": "",
+				"1": "",
+				"2": ""
+			},
+			"houseTitle": "",
+			"house": "",
+			"notService": "",
+			"aboutLink": "",
+			"asIsTitle": "",
+			"asIs": "",
+			"changesTitle": "",
+			"changes": "",
+			"lawTitle": "",
+			"law": ""
+		}
+	}
+}
