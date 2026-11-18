@@ -282,7 +282,9 @@
 		"fire": "選一個縣市放",
 		"later": "晚點再放",
 		"pick": "點一個縣市放煙火",
-		"cancel": "取消"
+		"cancel": "取消",
+		"hold": "留到跨年一起放",
+		"heldNote": "已經留好了，00:00 一起放"
 	},
 	"inAppBrowser": "請改用 Safari 或 Chrome 打開網頁，才能使用 Google 登入",
 	"footer": {
