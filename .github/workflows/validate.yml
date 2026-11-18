@@ -13,8 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
       - run: npm ci --no-audit --no-fund
       - run: npm run validate
+      # Crowdin 的 PR 只能改 messages/<語言>/ 的訊息檔（zh-TW 原文、CI 設定都不行）
+      - name: Crowdin PR 的範圍
+        if: github.event_name == 'pull_request' && github.head_ref == 'l10n_crowdin'
+        env:
+          BASE: ${{ github.base_ref }}
+        # --no-renames：改檔名要列出兩邊的路徑，不然把 zh-TW 改名成 en 就繞過去了
+        run: |
+          git diff --no-renames --name-only "origin/$BASE...HEAD" > changed.txt
+          node scripts/validate.mjs messages --changed-files changed.txt

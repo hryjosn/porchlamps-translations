@@ -1,0 +1,60 @@
+name: 記錄安全字的原文版本
+
+# Crowdin 送來的 PR（l10n_crowdin）：替這次改到的安全字記下「作者核准時看到的中文是這一版」（safety.hashes.json），
+# 並在 PR 留言逐字列出「中文原文／譯文」讓作者對照。
+#
+# 安全（docs/superpowers/specs/2026-11-18-crowdin-translation-design.md §4）：
+# - 腳本從 origin/main 取（crowdin-stamp.mjs、rules.mjs，都沒有相依），不安裝套件、不執行 PR 裡的任何程式碼。
+# - checkout 不保存憑證；STAMP_TOKEN（作者的 fine-grained PAT，只有這個 repo 的 Contents 寫入）只出現在最後 push 那一步。
+#   用預設的 GITHUB_TOKEN 推的 commit 不會再觸發「檢查翻譯」，分支保護會卡住，所以要另一個 token。
+# - 只處理同一個 repo 的 l10n_crowdin（fork 來的 PR 不跑，也拿不到 secret）；改到訊息檔以外的路徑就不記錄。
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: stamp-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  stamp:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'l10n_crowdin'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: l10n_crowdin
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: 從 main 取腳本
+        run: |
+          mkdir -p "$RUNNER_TEMP/stamp"
+          git show origin/main:scripts/crowdin-stamp.mjs > "$RUNNER_TEMP/stamp/crowdin-stamp.mjs"
+          git show origin/main:scripts/rules.mjs > "$RUNNER_TEMP/stamp/rules.mjs"
+      - name: 記錄
+        run: node "$RUNNER_TEMP/stamp/crowdin-stamp.mjs" --base origin/main --out comment.md --check-scope
+      - name: 有變動才 commit、push
+        env:
+          STAMP_TOKEN: ${{ secrets.STAMP_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ -n "$(git status --porcelain -- messages)" ]; then
+            git config user.name porchlamps-stamp
+            git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+            git add messages
+            git commit -m "chore: stamp safety translations"
+            git push "https://x-access-token:${STAMP_TOKEN}@github.com/${REPO}.git" HEAD:l10n_crowdin
+          fi
+      - name: PR 留言
+        if: always() && hashFiles('comment.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: gh pr comment "$PR" --edit-last --body-file comment.md || gh pr comment "$PR" --body-file comment.md

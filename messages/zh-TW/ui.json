@@ -39,6 +39,14 @@
 	},
 	"tonight": {
 		"tagline": "晚上留一句話，會有人替你點一盞燈",
+		"newyear": {
+			"minutes": "離 2027 還有 {m} 分鐘",
+			"seconds": "離 2027 還有 {s} 秒",
+			"celebrate": "2027 了。今晚全台 {n} 盞燈陪你跨年",
+			"celebrateQuiet": "2027 了。今晚有人陪你跨年",
+			"held": "還有 {m} 個人把煙火留到現在一起放",
+			"show": "留燈給大家的跨年煙火"
+		},
 		"whispersLabel": "{daypart, select, morning {今天別人留下的話} day {今天別人留下的話} evening {今晚別人留下的話} other {今晚別人留下的話}}",
 		"waiting": "還有 {n} 個人在等一盞燈",
 		"countShort": "{daypart, select, morning {今天 {n} 人} day {今天 {n} 人} evening {今晚 {n} 人} other {今晚 {n} 人}}",
@@ -363,12 +371,16 @@
 			},
 			"keeper": "有位守燈人會留意每句話，盡量讓每個人都能收到一盞燈。",
 			"notService": "留燈不是諮商或危機處理服務。",
-			"crisisLead": "如果現在需要有人陪你說說話："
+			"crisisLead": "如果現在需要有人陪你說說話：",
+			"translate": "留燈也想讓香港和其他地方的人讀得懂。如果你願意幫忙翻譯，不用會寫程式，在網頁上一句一句翻就好。",
+			"translateLink": "到 Crowdin 幫忙翻譯"
 		},
 		"feedback": {
 			"title": "意見回饋",
 			"description": "網站哪裡怪怪的、想要什麼功能，都可以在這裡告訴作者。",
-			"lead": "網站哪裡怪怪的、想要什麼功能，或只是想跟作者說點什麼，都可以寫在這裡。"
+			"lead": "網站哪裡怪怪的、想要什麼功能，或只是想跟作者說點什麼，都可以寫在這裡。",
+			"translate": "也可以幫忙把留燈翻成其他語言。",
+			"translateLink": "到 Crowdin 幫忙翻譯"
 		},
 		"notFound": {
 			"title": "這裡沒有房子",
@@ -544,6 +556,15 @@
 		"firework": "今晚我在{city}的夜空放了一朵煙火",
 		"glow": "今晚{city}每一則心情都有人點了燈",
 		"city": "{cityName}",
+		"newyear": {
+			"lit": "今年最後一晚，我為 {n} 個人點了燈",
+			"litParts": {
+				"0": "今年最後一晚，我為",
+				"1": "個人點了燈"
+			},
+			"cityLights": "{city}今晚亮了 {m} 盞",
+			"years": "2026→2027"
+		},
 		"invite": {
 			"0": "回到家，留一句話",
 			"1": "會有人替你點一盞燈"

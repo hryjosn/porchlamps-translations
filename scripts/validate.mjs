@@ -2,11 +2,13 @@
 // 這個檔會被 `npm run i18n:export` 原封不動複製進公開的翻譯 repo（scripts/validate.mjs），
 // 所以只能引用 node 內建與 @formatjs/icu-messageformat-parser，不能引用主 repo 的任何檔案。
 // 用法：node scripts/validate.mjs <messages 資料夾>（安全鍵清單在它旁邊的 safety-keys.json）。
+//       node scripts/validate.mjs <messages 資料夾> --changed-files <檔>：Crowdin 的 PR 只能改各語言的訊息檔（檔內每行一個路徑）。
 //       node scripts/validate.mjs <messages 資料夾> --stamp <語言>：翻完安全字後記下照哪一版原文翻的（safety.hashes.json）。
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { parse, TYPE } from '@formatjs/icu-messageformat-parser';
+import { crowdinScopeErrors, hashString, isLocaleDirName } from './rules.mjs';
 
 /** @typedef {Record<string, string>} Flat */
 /** @typedef {{ file: 'ui.json' | 'safety.json'; key: string; message: string }} Issue */
@@ -16,27 +18,8 @@ const isUnder = (
 	/** @type {readonly string[]} */ prefixes,
 ) => prefixes.some((p) => path === p || path.startsWith(`${p}.`));
 
-/**
- * FNV-1a 32-bit，跟主 repo 的 lib/i18n/flat.ts 的 hashString 一樣（測試守著）。只用來偵測原文有沒有改。
- * @param {string} s
- */
-export const hashString = (s) => {
-	let h = 0x811c9dc5;
-	for (const ch of new TextEncoder().encode(s)) {
-		h ^= ch;
-		h = Math.imul(h, 0x01000193) >>> 0;
-	}
-	return h.toString(16).padStart(8, '0');
-};
-
-/**
- * 語言資料夾名稱：BCP-47 的樣子（en、zh-HK、yue-Hant-HK），而且不是任何大小寫的 zh-TW
- * （macOS 不分大小寫，zh-tw 匯入時會蓋掉主 repo 的 messages/zh-TW）。
- * @param {string} name
- */
-export const isLocaleDirName = (name) =>
-	/^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$/.test(name) &&
-	name.toLowerCase() !== 'zh-tw';
+// 雜湊、語言資料夾名稱、Crowdin PR 範圍：放在無相依的 rules.mjs，crowdin-stamp.mjs 不用安裝套件也能用
+export { crowdinScopeErrors, hashString, isLocaleDirName } from './rules.mjs';
 
 /** 主 repo 的 lib/i18n/sync.ts 的 STALE_STAMP 要一致：匯入時這類錯誤只丟掉那一則、不擋整個語言 */
 export const STALE_STAMP = '中文原文改過';
@@ -248,6 +231,18 @@ if (
 	if (!dir) {
 		console.error('用法：node scripts/validate.mjs <messages 資料夾>');
 		process.exit(2);
+	}
+	const changed = process.argv.indexOf('--changed-files');
+	if (changed !== -1) {
+		const paths = readFileSync(process.argv[changed + 1], 'utf8')
+			.split('\n')
+			.map((l) => l.trim())
+			.filter(Boolean);
+		const bad = crowdinScopeErrors(paths);
+		for (const p of bad)
+			console.error(`✗ ${p}：Crowdin 的 PR 只能改 messages/<語言>/ 的訊息檔`);
+		if (bad.length) process.exit(1);
+		console.log(`✓ Crowdin PR 只改了訊息檔（${paths.length} 個）`);
 	}
 	const at = process.argv.indexOf('--stamp');
 	main(dir, at === -1 ? undefined : process.argv[at + 1]);
