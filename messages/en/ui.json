@@ -14,7 +14,6 @@
 		}
 	},
 	"hints": {
-		"house": "",
 		"skipAll": ""
 	},
 	"visit": {
@@ -38,7 +37,6 @@
 		"shareStory": ""
 	},
 	"tonight": {
-		"tagline": "",
 		"newyear": {
 			"minutes": "",
 			"seconds": "",
@@ -48,9 +46,6 @@
 			"show": ""
 		},
 		"whispersLabel": "",
-		"waiting": "",
-		"countShort": "",
-		"cardPosition": "",
 		"nextHouse": "",
 		"countyLights": "",
 		"countyLit": "",
@@ -59,27 +54,15 @@
 		"countyMine": "",
 		"countyLitByMe": "",
 		"countyGo": "",
-		"countFirst": "",
 		"heavy": "",
 		"mineNote": {
 			"seeYou": ""
 		},
-		"unseen": {
-			"line": "",
-			"go": ""
-		},
 		"noLightYet": "",
 		"nthLight": "",
 		"litBefore": "",
-		"litBeforeNamed": "",
-		"empty": "",
-		"quiet": "",
-		"quietSay": "",
 		"loading": "",
 		"loadFailed": "",
-		"litFor": "",
-		"yourTurn": "",
-		"yourTurnSay": "",
 		"mine": "",
 		"chipLights": ""
 	},
@@ -87,12 +70,8 @@
 		"house": "",
 		"houseUnseen": "",
 		"me": "",
-		"say": "",
 		"light": "",
-		"prev": "",
 		"next": "",
-		"hideCards": "",
-		"showCards": "",
 		"more": "",
 		"report": "",
 		"share": "",
@@ -305,7 +284,6 @@
 			"other": ""
 		},
 		"messageLabel": "",
-		"placeholder": "",
 		"contactLabel": "",
 		"contactPlaceholder": "",
 		"contactHint": "",

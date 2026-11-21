@@ -14,7 +14,6 @@
 		}
 	},
 	"hints": {
-		"house": "每天留一句話，房子會幫你記著",
 		"planeAimed": "也可以射一架紙飛機給他",
 		"planeDrift": "讓一架紙飛機隨風飛，落到某個人家門口",
 		"skipAll": "先不用"
@@ -40,7 +39,6 @@
 		"shareStory": "把這句做成卡片分享"
 	},
 	"tonight": {
-		"tagline": "晚上留一句話，會有人替你點一盞燈",
 		"newyear": {
 			"minutes": "離 2027 還有 {m} 分鐘",
 			"seconds": "離 2027 還有 {s} 秒",
@@ -50,9 +48,6 @@
 			"show": "留燈給大家的跨年煙火"
 		},
 		"whispersLabel": "{daypart, select, morning {今天別人留下的話} day {今天別人留下的話} evening {今晚別人留下的話} other {今晚別人留下的話}}",
-		"waiting": "還有 {n} 個人在等一盞燈",
-		"countShort": "{daypart, select, morning {今天 {n} 人} day {今天 {n} 人} evening {今晚 {n} 人} other {今晚 {n} 人}}",
-		"cardPosition": "{i} / {n}",
 		"nextHouse": "下一位 →",
 		"countyLights": "{daypart, select, morning {今天 {n} 盞燈} day {今天 {n} 盞燈} evening {今晚 {n} 盞燈} other {今晚 {n} 盞燈}}",
 		"countyLit": "{daypart, select, morning {今天有燈亮著} day {今天有燈亮著} evening {今晚有燈亮著} other {今晚有燈亮著}}",
@@ -61,40 +56,30 @@
 		"countyMine": "你",
 		"countyLitByMe": "已留燈",
 		"countyGo": "點燈 →",
-		"countFirst": "{daypart, select, morning {今天你是第一個} day {今天你是第一個} evening {今晚你是第一個} other {今晚你是第一個}}",
 		"heavy": "這句話有點沉重",
 		"mineNote": {
 			"seeYou": "設好了，明早見"
 		},
-		"unseen": {
-			"line": "有 {n} 盞燈為你亮過",
-			"go": "去看"
-		},
 		"noLightYet": "{daypart, select, morning {這句話會亮 24 小時，晚上再來看看誰來過} day {這句話會亮 24 小時，晚上再來看看誰來過} evening {這句話會亮 24 小時，明天再來看看誰來過} other {這句話會亮 24 小時，睡醒再來看看誰來過}}",
 		"nthLight": "第 {n} 次替你點燈了",
 		"litBefore": "你之前點過他的燈",
-		"litBeforeNamed": "你替{nickname}點過 {times} 次燈",
-		"empty": "{daypart, select, morning {早上比較安靜，夜裡的話都看完了} day {白天比較安靜，晚上再回來看看} evening {今晚的都看完了，晚點再來看看} other {夜裡很安靜，晚一點再回來看看}}",
-		"quiet": "{daypart, select, morning {早上還很安靜。要當第一個回家的人嗎？} day {白天還很安靜。要當第一個回家的人嗎？} evening {今晚還很安靜。要當第一個回家的人嗎？} other {夜裡很安靜。要當第一個回家的人嗎？}}",
-		"quietSay": "留下第一句",
 		"loading": "{daypart, select, morning {正在讀今天的話} day {正在讀今天的話} evening {正在讀今晚的話} other {正在讀今晚的話}}",
 		"loadFailed": "連線不太穩，晚點再試",
-		"litFor": "替{cityName}點了一盞燈",
-		"yourTurn": "{daypart, select, morning {換你留一句？今天也會有人替你點燈} day {換你留一句？今天也會有人替你點燈} evening {換你留一句？今晚也會有人替你點燈} other {換你留一句？今晚也會有人替你點燈}}",
-		"yourTurnSay": "留一句",
 		"mine": "{cityName}・你",
-		"chipLights": "{n} 盞燈"
+		"chipLights": "{n} 盞燈",
+		"sayAnother": "再說一句",
+		"moreLights": "其他的燈",
+		"inputPlaceholder": "{daypart, select, morning {今天想說什麼…} day {今天想說什麼…} evening {今晚想說什麼…} other {今晚想說什麼…}}",
+		"leave": "留下",
+		"rise": "昨晚 {n} 盞燈為你亮著"
 	},
 	"actions": {
 		"house": "我的房子",
 		"houseUnseen": "我的房子，有新的燈亮了",
+		"wish": "許願池",
 		"me": "我",
-		"say": "今天想說什麼",
 		"light": "點燈",
-		"prev": "上一句",
 		"next": "下一句",
-		"hideCards": "先收起留言",
-		"showCards": "打開留言，還有 {n} 句",
 		"more": "更多",
 		"report": "檢舉",
 		"share": "邀朋友來點燈",
@@ -104,7 +89,9 @@
 		"close": "關閉",
 		"back": "返回",
 		"backTonight": "回到地圖",
-		"retry": "再試一次"
+		"retry": "再試一次",
+		"write": "留一句",
+		"mine": "看我今晚說的"
 	},
 	"compose": {
 		"label": "{daypart, select, morning {今天想說的一句話} day {今天想說的一句話} evening {今晚想說的一句話} other {今晚想說的一句話}}",
@@ -222,7 +209,25 @@
 		"publicAsk": "要讓別人逛你的房子嗎",
 		"publicYes": "好，讓大家逛",
 		"publicNo": "先不用",
-		"publicFailed": "暫時沒辦法改，晚點再試"
+		"publicFailed": "暫時沒辦法改，晚點再試",
+		"silhouette": {
+			"reader": {
+				"line0": "茶還熱的",
+				"line1": "這頁看第三遍了"
+			},
+			"cat": {
+				"line0": "牠比較想睡",
+				"line1": "窗台是牠的"
+			},
+			"plant": {
+				"line0": "葉子長了一點",
+				"line1": "明天應該會晴"
+			},
+			"guitar": {
+				"line0": "只會這三個和弦",
+				"line1": "小聲彈，鄰居睡了"
+			}
+		}
 	},
 	"install": {
 		"add": "加到主畫面",
@@ -241,12 +246,16 @@
 		"morning": "有 {n} 盞燈為你亮過",
 		"plane": "有一架紙飛機從{city}飛來",
 		"planeAnon": "有一架紙飛機飛來",
+		"line": "{city}有個你點過燈的人，後來又說了一句。他新的心情是什麼？",
+		"lineAnon": "有個你點過燈的人，後來又說了一句。他新的心情是什麼？",
 		"morningPlanes": "門口有 {n} 架紙飛機在等你",
 		"morningWithPlanes": "有 {n} 盞燈為你亮過，門口還有 {planes} 架紙飛機在等你",
+		"morningLines": "夜裡有 {n} 位你點過燈的人又說了一句",
 		"evening": "到家了嗎？今晚想說點什麼",
 		"ask": "有人點燈時通知我",
 		"wantsLights": "收到燈或紙飛機時通知我",
 		"wantsEvening": "晚上提醒我回來留句話",
+		"wantsLines": "點過燈的人又說話時通知我",
 		"sectionTitle": "通知",
 		"denied": "通知權限被關掉了，請到瀏覽器設定打開",
 		"needsInstall": "要先加到主畫面、從那裡打開，才收得到通知",
@@ -355,32 +364,36 @@
 		"privacy": "隱私權政策",
 		"terms": "使用條款",
 		"contact": "聯絡",
-		"feedback": "意見回饋",
+		"feedback": "許願池",
 		"home": "回到地圖",
 		"nav": "網站資訊",
 		"translate": "幫忙翻譯"
 	},
 	"feedback": {
-		"kindLabel": "想說的是",
+		"kindLabel": "你手上這枚硬幣是",
 		"kinds": {
-			"bug": "哪裡壞掉了",
-			"idea": "想要的功能或建議",
-			"other": "其他想說的"
+			"bug": "抱怨：這裡壞掉了、好難用",
+			"idea": "許願：我希望有……",
+			"other": "沒什麼，只是路過丟個硬幣"
 		},
-		"messageLabel": "內容",
-		"placeholder": "在哪個畫面、做了什麼、發生了什麼，寫得出來的就好。",
-		"contactLabel": "聯絡方式（選填）",
+		"messageLabel": "對池子說",
+		"placeholders": {
+			"idea": "寫得越具體越有機會成真，池子的理解力有限。",
+			"bug": "在哪個畫面、做了什麼、結果怎樣。罵得越清楚，修得越快。",
+			"other": "說什麼都可以。池子很會聽，就是不太會回話。"
+		},
+		"contactLabel": "留個聯絡方式（選填）",
 		"contactPlaceholder": "Email 或 Threads 帳號",
-		"contactHint": "需要問你細節時才會用到，不留也可以。",
-		"houseNote": "如果你有房子，會一起附上房子的代號，方便作者去看看。",
-		"privacy": "送出的內容只會存在作者私人的 GitHub 專案裡，只有作者看得到。",
-		"send": "送出",
-		"sending": "送出中",
-		"sent": "收到了，謝謝你。",
-		"again": "再寫一則",
-		"invalid": "還沒送出：內容太短或太長，改一下再送一次。",
-		"failed": "現在送不出去，晚點再試，或寫信到 {email}",
-		"rateLimited": "這一小時送得有點多了，晚點再試，或寫信到 {email}"
+		"contactHint": "願望看不懂的時候，作者會來問你。不留也沒關係，池子不記仇。",
+		"houseNote": "如果你有房子，會順便附上房子的代號，方便作者去現場看看。",
+		"privacy": "池底接的是作者私人的 GitHub，只有作者看得到，不會漂到別人那裡。",
+		"send": "投進池子",
+		"sending": "撲通……",
+		"sent": "撲通。收到了，作者會找時間撈起來看。",
+		"again": "再丟一枚",
+		"invalid": "沒丟進去：字太少或太多，池子吞不下。改一下再丟一次。",
+		"failed": "池子現在有點塞住，晚點再試，或寫信到 {email}",
+		"rateLimited": "這一小時丟得有點多，池子需要喘口氣。晚點再試，或寫信到 {email}"
 	},
 	"share": {
 		"copied": "已複製",
@@ -419,6 +432,7 @@
 			"1": "晚上回到家，房子會在這裡等你。"
 		},
 		"footer": "這封信只寫給你：不會有你寫的話，也不會有別人的名字。你在個人頁打開了「早上用 email 通知我」，所以收到這封。",
+		"footerGuest": "這封信只寫給你：不會有你寫的話，也不會有別人的名字。你在留燈留下了這個信箱，所以收到這封。",
 		"settings": "通知設定",
 		"domain": "porchlamps.app",
 		"unsubscribe": "取消訂閱早上的信",
@@ -431,6 +445,45 @@
 			"button": "確定取消",
 			"done": "已經取消訂閱了。之後想再收，到個人頁打開就可以。",
 			"bad": "這個連結不完整，請到個人頁關閉通知。"
+		},
+		"guestAsk": {
+			"ask": "明早告訴我有幾盞燈",
+			"placeholder": "你的 email",
+			"send": "寄確認信",
+			"sent": "確認信寄出了，去信箱點一下",
+			"invalid": "好像不太對",
+			"failed": "沒寄出去，等一下再試"
+		}
+	},
+	"emailVerify": {
+		"mail": {
+			"subject": "點一下，明早告訴你有幾盞燈",
+			"preheader": "點一下，明天早上就會告訴你。",
+			"opening": "你在留燈留下了這個信箱。",
+			"lead": "確認是你，明天早上就告訴你，昨晚有幾盞燈為你亮過。",
+			"cta": "是我，確認",
+			"ttl": "連結 24 小時內有效。",
+			"footer": "不是你填的，就不用理它；沒按確認，就不會收到早上的信。"
+		},
+		"page": {
+			"title": "確認這是你的信箱",
+			"lead": "按一下，明天早上就告訴你昨晚有幾盞燈。",
+			"button": "是我，確認",
+			"failed": "沒有成功，再按一次試試",
+			"doneTitle": "好，明早告訴你",
+			"doneLead": "早上醒來，信箱裡會有一封信。",
+			"doneCta": "回房子看看",
+			"expiredTitle": "這個連結用過或過期了",
+			"expired": "回首頁再寄一次就好。",
+			"badTitle": "這個連結不完整",
+			"bad": "回首頁再寄一次就好。",
+			"home": "回首頁",
+			"previewLead": "這是你的房子嗎？最近一句是：",
+			"previewEmpty": "這棟房子還沒有說過話。",
+			"mine": "是我的，確認",
+			"notMine": "這不是我的",
+			"notMineTitle": "那就不用理這封信",
+			"notMineLead": "沒按確認，就不會收到早上的信。"
 		}
 	},
 	"pages": {
@@ -454,9 +507,9 @@
 			"mapCredit": "香港區界資料來源：香港特別行政區政府民政事務總署，經 DATA.GOV.HK。資料版權屬香港特別行政區政府及相關機構所有。"
 		},
 		"feedback": {
-			"title": "意見回饋",
-			"description": "網站哪裡怪怪的、想要什麼功能，都可以在這裡告訴作者。",
-			"lead": "網站哪裡怪怪的、想要什麼功能，或只是想跟作者說點什麼，都可以寫在這裡。",
+			"title": "許願池",
+			"description": "想要的功能、看不順眼的地方，都可以丟進池子裡，作者會來撈。",
+			"lead": "這是一座很淺的池子，只有作者一個人在撈。想要的功能、看不順眼的地方，或只是想對著水面嘆口氣，都可以丟進來。",
 			"translate": "也可以幫忙把留燈翻成其他語言。",
 			"translateLink": "到 Crowdin 幫忙翻譯"
 		},
