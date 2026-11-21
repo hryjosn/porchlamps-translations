@@ -24,6 +24,183 @@
 		"keep": "",
 		"after": ""
 	},
+	"support": {
+		"formLabel": "",
+		"kindLabel": "",
+		"kinds": {
+			"monthly": "",
+			"once": ""
+		},
+		"amountLabel": {
+			"monthly": "",
+			"once": ""
+		},
+		"notes": {
+			"monthly": {
+				"60": "",
+				"100": "",
+				"300": "",
+				"500": "",
+				"1000": "",
+				"custom": ""
+			},
+			"once": {
+				"60": "",
+				"100": "",
+				"300": "",
+				"500": "",
+				"1000": "",
+				"custom": ""
+			}
+		},
+		"customLabel": "",
+		"customPlaceholder": "",
+		"customMin": "",
+		"range": "",
+		"emailLabel": {
+			"monthly": "",
+			"once": ""
+		},
+		"nameLabel": "",
+		"namePlaceholder": "",
+		"messageLabel": "",
+		"count": "",
+		"onlyAuthor": "",
+		"submit": {
+			"monthly": "",
+			"once": ""
+		},
+		"submitPlain": "",
+		"redirecting": "",
+		"fine": {
+			"monthly": "",
+			"once": ""
+		},
+		"cardNote": "",
+		"emailNeeded": "",
+		"invalid": "",
+		"busy": "",
+		"failed": "",
+		"manage": {
+			"loading": "",
+			"gone": "",
+			"loadFailed": "",
+			"amount": "",
+			"amountValue": "",
+			"started": "",
+			"notStarted": "",
+			"times": "",
+			"timesValue": "",
+			"next": "",
+			"status": "",
+			"statuses": {
+				"pending": "",
+				"active": "",
+				"failing": "",
+				"cancelled": "",
+				"ended": "",
+				"paid": "",
+				"failed": ""
+			},
+			"cancel": "",
+			"cancelling": "",
+			"cancelNote": "",
+			"cancelFailed": "",
+			"done": "",
+			"stopped": "",
+			"again": ""
+		}
+	},
+	"sponsorMail": {
+		"anonymous": "",
+		"money": "",
+		"date": "",
+		"monthlyDay": "",
+		"monthlyDayUnknown": "",
+		"periods": "",
+		"sign": "",
+		"manage": "",
+		"again": "",
+		"home": "",
+		"facts": {
+			"amount": "",
+			"monthlyAmount": "",
+			"periodAmount": "",
+			"chargeDay": "",
+			"paidOn": "",
+			"periods": "",
+			"method": "",
+			"card": ""
+		},
+		"invoice": "",
+		"thanksOnce": {
+			"subject": "",
+			"preheader": "",
+			"heading": "",
+			"body": "",
+			"closing": ""
+		},
+		"thanks": {
+			"subject": "",
+			"preheader": "",
+			"heading": "",
+			"body": "",
+			"note": "",
+			"closing": ""
+		},
+		"charged": {
+			"subject": "",
+			"preheader": "",
+			"heading": "",
+			"body": "",
+			"note": "",
+			"closing": ""
+		},
+		"failed": {
+			"subject": "",
+			"preheader": "",
+			"heading": "",
+			"body": "",
+			"note": "",
+			"closing": ""
+		},
+		"cancelled": {
+			"subject": "",
+			"preheader": "",
+			"heading": "",
+			"body": "",
+			"thanks": "",
+			"note": "",
+			"status": "",
+			"closing": ""
+		},
+		"ended": {
+			"subject": "",
+			"preheader": "",
+			"heading": "",
+			"body": "",
+			"note": "",
+			"closing": ""
+		},
+		"footer": {
+			"monthly": "",
+			"once": ""
+		},
+		"toAuthor": {
+			"subject": "",
+			"heading": "",
+			"monthly": "",
+			"once": "",
+			"name": "",
+			"time": "",
+			"timeValue": "",
+			"amount": "",
+			"email": "",
+			"noEmail": "",
+			"note": "",
+			"footer": ""
+		}
+	},
 	"hotlines": {
 		"label": "",
 		"tw": {
@@ -48,6 +225,45 @@
 		}
 	},
 	"pages": {
+		"support": {
+			"title": "",
+			"description": "",
+			"lead": {
+				"0": "",
+				"1": "",
+				"2": ""
+			},
+			"useTitle": "",
+			"use": "",
+			"payTitle": "",
+			"pay": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": ""
+			},
+			"refundTitle": "",
+			"refund": "",
+			"storeTitle": "",
+			"storeName": "",
+			"storeTaxId": "",
+			"storeEmail": "",
+			"thanks": {
+				"title": "",
+				"description": "",
+				"body": {
+					"0": "",
+					"1": "",
+					"2": "",
+					"3": ""
+				},
+				"mail": ""
+			},
+			"manage": {
+				"title": "",
+				"description": ""
+			}
+		},
 		"privacy": {
 			"title": "",
 			"description": "",
@@ -64,7 +280,8 @@
 				"6": "",
 				"7": "",
 				"8": "",
-				"9": ""
+				"9": "",
+				"10": ""
 			},
 			"purposeTitle": "",
 			"purpose": "",
@@ -74,7 +291,9 @@
 				"1": "",
 				"2": "",
 				"3": "",
-				"4": ""
+				"4": "",
+				"5": "",
+				"6": ""
 			},
 			"whoSeesTitle": "",
 			"whoSees": {
@@ -82,7 +301,8 @@
 				"1": "",
 				"2": "",
 				"3": "",
-				"4": ""
+				"4": "",
+				"5": ""
 			},
 			"servicesTitle": "",
 			"servicesLead": "",
@@ -93,11 +313,6 @@
 					"url": ""
 				},
 				"1": {
-					"name": "",
-					"use": "",
-					"url": ""
-				},
-				"2": {
 					"name": "",
 					"use": "",
 					"url": ""
@@ -118,6 +333,11 @@
 					"url": ""
 				},
 				"6": {
+					"name": "",
+					"use": "",
+					"url": ""
+				},
+				"7": {
 					"name": "",
 					"use": "",
 					"url": ""
@@ -154,6 +374,12 @@
 			},
 			"houseTitle": "",
 			"house": "",
+			"sponsorTitle": "",
+			"sponsor": {
+				"0": "",
+				"1": "",
+				"2": ""
+			},
 			"notService": "",
 			"aboutLink": "",
 			"asIsTitle": "",
