@@ -14,7 +14,8 @@
 		}
 	},
 	"hints": {
-		"house": "",
+		"planeAimed": "",
+		"planeDrift": "",
 		"skipAll": ""
 	},
 	"visit": {
@@ -38,7 +39,6 @@
 		"shareStory": ""
 	},
 	"tonight": {
-		"tagline": "",
 		"newyear": {
 			"minutes": "",
 			"seconds": "",
@@ -48,9 +48,6 @@
 			"show": ""
 		},
 		"whispersLabel": "",
-		"waiting": "",
-		"countShort": "",
-		"cardPosition": "",
 		"nextHouse": "",
 		"countyLights": "",
 		"countyLit": "",
@@ -59,40 +56,30 @@
 		"countyMine": "",
 		"countyLitByMe": "",
 		"countyGo": "",
-		"countFirst": "",
 		"heavy": "",
 		"mineNote": {
 			"seeYou": ""
 		},
-		"unseen": {
-			"line": "",
-			"go": ""
-		},
 		"noLightYet": "",
 		"nthLight": "",
 		"litBefore": "",
-		"litBeforeNamed": "",
-		"empty": "",
-		"quiet": "",
-		"quietSay": "",
 		"loading": "",
 		"loadFailed": "",
-		"litFor": "",
-		"yourTurn": "",
-		"yourTurnSay": "",
 		"mine": "",
-		"chipLights": ""
+		"chipLights": "",
+		"sayAnother": "",
+		"moreLights": "",
+		"inputPlaceholder": "",
+		"leave": "",
+		"rise": ""
 	},
 	"actions": {
 		"house": "",
 		"houseUnseen": "",
+		"wish": "",
 		"me": "",
-		"say": "",
 		"light": "",
-		"prev": "",
 		"next": "",
-		"hideCards": "",
-		"showCards": "",
 		"more": "",
 		"report": "",
 		"share": "",
@@ -102,7 +89,9 @@
 		"close": "",
 		"back": "",
 		"backTonight": "",
-		"retry": ""
+		"retry": "",
+		"write": "",
+		"mine": ""
 	},
 	"compose": {
 		"label": "",
@@ -220,7 +209,25 @@
 		"publicAsk": "",
 		"publicYes": "",
 		"publicNo": "",
-		"publicFailed": ""
+		"publicFailed": "",
+		"silhouette": {
+			"reader": {
+				"line0": "",
+				"line1": ""
+			},
+			"cat": {
+				"line0": "",
+				"line1": ""
+			},
+			"plant": {
+				"line0": "",
+				"line1": ""
+			},
+			"guitar": {
+				"line0": "",
+				"line1": ""
+			}
+		}
 	},
 	"install": {
 		"add": "",
@@ -235,11 +242,20 @@
 	"push": {
 		"light": "",
 		"lightAnon": "",
+		"lightMilestone": "",
 		"morning": "",
+		"plane": "",
+		"planeAnon": "",
+		"line": "",
+		"lineAnon": "",
+		"morningPlanes": "",
+		"morningWithPlanes": "",
+		"morningLines": "",
 		"evening": "",
 		"ask": "",
 		"wantsLights": "",
 		"wantsEvening": "",
+		"wantsLines": "",
 		"sectionTitle": "",
 		"denied": "",
 		"needsInstall": "",
@@ -268,11 +284,14 @@
 		},
 		"loadFailed": "",
 		"logout": "",
+		"coffee": "",
 		"logoutFailed": "",
 		"deleteAccount": "",
 		"deleteConfirm": "",
 		"deleteConfirmYes": "",
 		"deleteCancel": "",
+		"translate": "",
+		"translateLink": "",
 		"deleteFailed": ""
 	},
 	"map": {
@@ -280,6 +299,36 @@
 		"myHouse": "",
 		"showAll": "",
 		"collectedLabel": ""
+	},
+	"planes": {
+		"phrases": {
+			"thought": "",
+			"noreply": "",
+			"blanket": "",
+			"fed": "",
+			"tomorrow": "",
+			"slow": "",
+			"company": "",
+			"sleep": "",
+			"awake": "",
+			"seeyou": "",
+			"enough": "",
+			"far": "",
+			"unknown": ""
+		},
+		"send": "",
+		"drift": "",
+		"fire": "",
+		"sent": "",
+		"blocked": "",
+		"from": "",
+		"fromAnon": "",
+		"waiting": "",
+		"mailbox": "",
+		"mailboxCount": "",
+		"open": "",
+		"letter": "",
+		"fold": ""
 	},
 	"firework": {
 		"button": "",
@@ -294,6 +343,11 @@
 		"heldNote": "",
 		"giftInvitedTitle": "",
 		"giftInvitedBody": "",
+		"explainTitle": "",
+		"explainBody": "",
+		"explainShare": "",
+		"explainShareText": "",
+		"explainLater": "",
 		"giftInviterTitle": "",
 		"giftInviterBody": "",
 		"giftMore": ""
@@ -312,7 +366,8 @@
 		"contact": "",
 		"feedback": "",
 		"home": "",
-		"nav": ""
+		"nav": "",
+		"translate": ""
 	},
 	"feedback": {
 		"kindLabel": "",
@@ -322,7 +377,11 @@
 			"other": ""
 		},
 		"messageLabel": "",
-		"placeholder": "",
+		"placeholders": {
+			"idea": "",
+			"bug": "",
+			"other": ""
+		},
 		"contactLabel": "",
 		"contactPlaceholder": "",
 		"contactHint": "",
@@ -352,7 +411,10 @@
 	},
 	"email": {
 		"subject": "",
+		"subjectPlanes": "",
+		"planes": "",
 		"preheader": "",
+		"preheaderPlanes": "",
 		"brand": "",
 		"date": "",
 		"greeting": "",
@@ -370,9 +432,11 @@
 			"1": ""
 		},
 		"footer": "",
+		"footerGuest": "",
 		"settings": "",
 		"domain": "",
 		"unsubscribe": "",
+		"coffee": "",
 		"setting": "",
 		"ask": "",
 		"sendsTo": "",
@@ -381,6 +445,45 @@
 			"button": "",
 			"done": "",
 			"bad": ""
+		},
+		"guestAsk": {
+			"ask": "",
+			"placeholder": "",
+			"send": "",
+			"sent": "",
+			"invalid": "",
+			"failed": ""
+		}
+	},
+	"emailVerify": {
+		"mail": {
+			"subject": "",
+			"preheader": "",
+			"opening": "",
+			"lead": "",
+			"cta": "",
+			"ttl": "",
+			"footer": ""
+		},
+		"page": {
+			"title": "",
+			"lead": "",
+			"button": "",
+			"failed": "",
+			"doneTitle": "",
+			"doneLead": "",
+			"doneCta": "",
+			"expiredTitle": "",
+			"expired": "",
+			"badTitle": "",
+			"bad": "",
+			"home": "",
+			"previewLead": "",
+			"previewEmpty": "",
+			"mine": "",
+			"notMine": "",
+			"notMineTitle": "",
+			"notMineLead": ""
 		}
 	},
 	"pages": {
@@ -391,13 +494,17 @@
 				"0": "",
 				"1": "",
 				"2": "",
-				"3": ""
+				"3": "",
+				"4": ""
 			},
 			"keeper": "",
+			"support": "",
+			"supportLink": "",
 			"notService": "",
 			"crisisLead": "",
 			"translate": "",
-			"translateLink": ""
+			"translateLink": "",
+			"mapCredit": ""
 		},
 		"feedback": {
 			"title": "",
@@ -570,6 +677,11 @@
 	"browserSwitch": {
 		"openIn": ""
 	},
+	"invite": {
+		"pageTitle": "",
+		"description": "",
+		"ogAlt": ""
+	},
 	"og": {
 		"brand": "",
 		"lit": "",
@@ -592,6 +704,16 @@
 		"invite": {
 			"0": "",
 			"1": ""
+		},
+		"inviteCard": {
+			"title": {
+				"0": "",
+				"1": ""
+			},
+			"sub": {
+				"0": "",
+				"1": ""
+			}
 		},
 		"domain": ""
 	},
